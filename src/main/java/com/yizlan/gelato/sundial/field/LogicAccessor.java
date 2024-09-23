@@ -14,29 +14,32 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.builder;
+package com.yizlan.gelato.sundial.field;
 
 import java.io.Serializable;
 
 /**
- * Builder pattern.
- * <p>
- * Used to construct objects of type T.
- * <p>
- * Note: In the version {@code 1.2.0}, this class will be moved to
- * the <code>com.yizlan.gelato.sundial.gof</code> package.
+ * Provides accessors for the logic delete.
+ * It allows for retrieving and setting the logic delete field of an entity.
  *
- * @param <T> The type of object the builder will construct.
+ * @param <T> A comparable and serializable type used for the logic delete field.
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.1
  */
-public interface Builder<T> extends Serializable {
+public interface LogicAccessor<T extends Comparable<T> & Serializable> {
 
     /**
-     * build <code>T</code>
+     * Gets the value of the logic delete.
      *
-     * @return T The constructed object
+     * @return The value of the logic delete field.
      */
-    T build();
+    T getDeleted();
+
+    /**
+     * Sets the value of the logic delete.
+     *
+     * @param deleted The value to set for the logic delete field.
+     */
+    void setDeleted(T deleted);
 
 }

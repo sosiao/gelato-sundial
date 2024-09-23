@@ -14,29 +14,32 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.builder;
+package com.yizlan.gelato.sundial.field;
 
 import java.io.Serializable;
 
 /**
- * Builder pattern.
- * <p>
- * Used to construct objects of type T.
- * <p>
- * Note: In the version {@code 1.2.0}, this class will be moved to
- * the <code>com.yizlan.gelato.sundial.gof</code> package.
+ * Provides accessors for the creator ID.
+ * It allows for retrieving and setting the creator ID of an entity.
  *
- * @param <T> The type of object the builder will construct.
+ * @param <T> A comparable and serializable type used for the creator ID.
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.1
  */
-public interface Builder<T> extends Serializable {
+public interface CreateIdAccessor<T extends Comparable<T> & Serializable> {
 
     /**
-     * build <code>T</code>
+     * Retrieves the ID of the creator.
      *
-     * @return T The constructed object
+     * @return The creator ID of the required type.
      */
-    T build();
+    T getCreateBy();
+
+    /**
+     * Assigns the creator ID.
+     *
+     * @param createBy The T-type parameter used to set the creator ID.
+     */
+    void setCreateBy(T createBy);
 
 }

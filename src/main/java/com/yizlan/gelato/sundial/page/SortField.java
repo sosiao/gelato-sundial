@@ -40,10 +40,10 @@ public class SortField implements Serializable {
      * Indicates the sorting method: if {@code true}，sort in ascending order; otherwise {@code false}，sort in
      * descending order.
      */
-    private boolean asc;
+    private boolean asc = true;
 
     protected SortField() {
-        this.asc = true;
+        // to do nothing
     }
 
     public SortField(SortFieldBuilder<?, ?> sortFieldBuilder) {

@@ -46,8 +46,7 @@ public class Pagination implements Serializable {
     private List<SortField> sortFields;
 
     protected Pagination() {
-        this.pageIndex = 0;
-        this.pageSize = 10;
+        // to do nothing
     }
 
     public Pagination(PaginationBuilder<?, ?> paginationBuilder) {

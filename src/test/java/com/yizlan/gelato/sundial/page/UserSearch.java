@@ -28,7 +28,7 @@ public class UserSearch extends Pagination {
 
     private String email;
 
-    protected UserSearch() {
+    public UserSearch() {
         super();
     }
 

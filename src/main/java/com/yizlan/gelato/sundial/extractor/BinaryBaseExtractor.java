@@ -14,29 +14,21 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.builder;
+package com.yizlan.gelato.sundial.extractor;
 
 import java.io.Serializable;
 
 /**
- * Builder pattern.
- * <p>
- * Used to construct objects of type T.
- * <p>
- * Note: In the version {@code 1.2.0}, this class will be moved to
- * the <code>com.yizlan.gelato.sundial.gof</code> package.
+ * Provides accessors for the operator and time fields of an entity.
  *
- * @param <T> The type of object the builder will construct.
+ * @param <T> the type of fields that contains the creator ID and the updater ID with the same type,
+ *            should implement {@link Comparable} and {@link Serializable}
+ * @param <U> the type of fields that contains the creation time and update time with the same type,
+ *            should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.1
  */
-public interface Builder<T> extends Serializable {
-
-    /**
-     * build <code>T</code>
-     *
-     * @return T The constructed object
-     */
-    T build();
+public interface BinaryBaseExtractor<T extends Comparable<T> & Serializable,
+        U extends Comparable<? super U> & Serializable> extends BiBaseExtractor<T, U, T, U> {
 
 }
