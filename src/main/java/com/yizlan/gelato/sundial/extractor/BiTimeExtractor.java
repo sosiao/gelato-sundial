@@ -27,6 +27,8 @@ import java.io.Serializable;
  * @param <T> the type of the creation time, should implement {@link Comparable} and {@link Serializable}
  * @param <U> the type of the update time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
+ * @see CreateTimeAccessor
+ * @see UpdateTimeAccessor
  * @since 1.1
  */
 public interface BiTimeExtractor<T extends Comparable<? super T> & Serializable,

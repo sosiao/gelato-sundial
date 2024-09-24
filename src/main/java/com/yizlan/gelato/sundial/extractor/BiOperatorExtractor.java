@@ -27,6 +27,8 @@ import java.io.Serializable;
  * @param <T> the type of the creator ID, should implement {@link Comparable} and {@link Serializable}
  * @param <U> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
+ * @see CreateIdAccessor
+ * @see UpdateIdAccessor
  * @since 1.1
  */
 public interface BiOperatorExtractor<T extends Comparable<T> & Serializable,

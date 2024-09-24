@@ -27,6 +27,8 @@ import java.io.Serializable;
  * @param <T> the type of the creator ID, should implement {@link Comparable} and {@link Serializable}
  * @param <U> the type of the creation time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
+ * @see CreateIdAccessor
+ * @see CreateTimeAccessor
  * @since 1.1
  */
 public interface CreateExtractor<T extends Comparable<T> & Serializable,

@@ -14,19 +14,22 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
+package com.yizlan.gelato.sundial.field;
 
-import java.io.Serializable;
+import org.junit.jupiter.api.Test;
 
-/**
- * Provides accessors for the creator ID and the updater ID time with the same type.
- *
- * @param <T> the type of fields that contains the creator ID and the updater ID,
- *            should implement {@link Comparable} and {@link Serializable}
- * @author Zen Gershon
- * @see BiOperatorExtractor
- * @since 1.1
- */
-public interface BinaryOperatorExtractor<T extends Comparable<T> & Serializable> extends BiOperatorExtractor<T, T> {
+import java.time.LocalDateTime;
+import java.util.Date;
 
+public class FieldTest {
+
+    @Test
+    public void testField() {
+        BaseTime baseTime = BaseTime.builder()
+                .createTime(new Date())
+                .updateTime(LocalDateTime.now())
+                .build();
+
+        System.out.println(baseTime);
+    }
 }

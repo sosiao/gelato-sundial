@@ -16,6 +16,8 @@
 
 package com.yizlan.gelato.sundial.field;
 
+import com.yizlan.gelato.sundial.builder.Builder;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -43,5 +45,41 @@ public class BaseTime implements CreateTimeAccessor<Date>, UpdateTimeAccessor<Lo
 
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public String toString() {
+        return "BaseTime{" +
+                "createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
+
+    public static BaseTimeBuilder builder() {
+        return new BaseTimeBuilder();
+    }
+
+    public static class BaseTimeBuilder implements Builder<BaseTime> {
+
+        private final BaseTime baseTime;
+
+        public BaseTimeBuilder() {
+            this.baseTime = new BaseTime();
+        }
+
+        public BaseTimeBuilder createTime(final Date createTime) {
+            this.baseTime.createTime = createTime;
+            return this;
+        }
+
+        public BaseTimeBuilder updateTime(final LocalDateTime updateTime) {
+            this.baseTime.updateTime = updateTime;
+            return this;
+        }
+
+        @Override
+        public BaseTime build() {
+            return this.baseTime;
+        }
     }
 }

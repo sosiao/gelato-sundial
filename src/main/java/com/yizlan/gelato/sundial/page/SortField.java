@@ -24,6 +24,7 @@ import java.io.Serializable;
  * Sort field class，used to represent the sorting rules of database columns in queries.
  *
  * @author Zen Gershon
+ * @see Builder
  * @since 1.0
  */
 public class SortField implements Serializable {

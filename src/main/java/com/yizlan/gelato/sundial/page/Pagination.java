@@ -25,6 +25,7 @@ import java.util.List;
  * Pagination class is responsible for handling pagination and sorting parameters.
  *
  * @author Zen Gershon
+ * @see Builder
  * @since 1.0
  */
 public class Pagination implements Serializable {

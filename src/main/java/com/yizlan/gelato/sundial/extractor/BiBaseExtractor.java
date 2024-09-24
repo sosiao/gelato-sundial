@@ -31,6 +31,10 @@ import java.io.Serializable;
  * @param <S> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
  * @param <Q> the type of the update time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
+ * @see CreateIdAccessor
+ * @see CreateTimeAccessor
+ * @see UpdateIdAccessor
+ * @see UpdateTimeAccessor
  * @since 1.1
  */
 public interface BiBaseExtractor<T extends Comparable<T> & Serializable,

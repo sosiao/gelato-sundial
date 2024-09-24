@@ -24,6 +24,7 @@ import java.io.Serializable;
  * @param <T> the type of fields that contains the creation time and update time,
  *            should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
+ * @see BiTimeExtractor
  * @since 1.1
  */
 public interface BinaryTimeExtractor<T extends Comparable<? super T> & Serializable> extends BiTimeExtractor<T, T> {
