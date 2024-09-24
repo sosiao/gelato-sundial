@@ -20,12 +20,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Collections;
 
-/**
- * ****
- *
- * @author Zen Gershon
- * @since 1.0
- */
 public class PageTest {
 
     @Test

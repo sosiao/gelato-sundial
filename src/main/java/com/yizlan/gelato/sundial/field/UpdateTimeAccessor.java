@@ -14,29 +14,32 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.builder;
+package com.yizlan.gelato.sundial.field;
 
 import java.io.Serializable;
 
 /**
- * Builder pattern.
- * <p>
- * Used to construct objects of type T.
- * <p>
- * Note: In the version {@code 1.2.0}, this class will be moved to
- * the <code>com.yizlan.gelato.sundial.gof</code> package.
+ * Provides accessors for the update time.
+ * It allows for retrieving and setting the update time of an entity.
  *
- * @param <T> The type of object the builder will construct.
+ * @param <T> A comparable and serializable type used for the update time.
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.1
  */
-public interface Builder<T> extends Serializable {
+public interface UpdateTimeAccessor<T extends Comparable<? super T> & Serializable> {
 
     /**
-     * build <code>T</code>
+     * Retrieves the update time.
      *
-     * @return T The constructed object
+     * @return The update time of the required type.
      */
-    T build();
+    T getUpdateTime();
+
+    /**
+     * Assigns the update time.
+     *
+     * @param updateTime The T-type parameter used to set the update time.
+     */
+    void setUpdateTime(T updateTime);
 
 }
