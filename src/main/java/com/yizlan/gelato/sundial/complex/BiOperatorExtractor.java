@@ -14,32 +14,24 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
+package com.yizlan.gelato.sundial.complex;
 
 import com.yizlan.gelato.sundial.field.CreateIdAccessor;
-import com.yizlan.gelato.sundial.field.CreateTimeAccessor;
 import com.yizlan.gelato.sundial.field.UpdateIdAccessor;
-import com.yizlan.gelato.sundial.field.UpdateTimeAccessor;
 
 import java.io.Serializable;
 
 /**
- * Provides accessors for the operator and time fields of an entity.
+ * Provides accessors for the creator ID and the updater ID.
  *
  * @param <T> the type of the creator ID, should implement {@link Comparable} and {@link Serializable}
- * @param <U> the type of the creation time, should implement {@link Comparable} and {@link Serializable}
- * @param <S> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
- * @param <Q> the type of the update time, should implement {@link Comparable} and {@link Serializable}
+ * @param <U> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
  * @see CreateIdAccessor
- * @see CreateTimeAccessor
  * @see UpdateIdAccessor
- * @see UpdateTimeAccessor
  * @since 1.1
  */
-public interface BiBaseExtractor<T extends Comparable<T> & Serializable,
-        U extends Comparable<? super U> & Serializable, S extends Comparable<S> & Serializable,
-        Q extends Comparable<? super Q> & Serializable>
-        extends CreateIdAccessor<T>, CreateTimeAccessor<U>, UpdateIdAccessor<S>, UpdateTimeAccessor<Q> {
+public interface BiOperatorExtractor<T extends Comparable<T> & Serializable,
+        U extends Comparable<U> & Serializable> extends CreateIdAccessor<T>, UpdateIdAccessor<U> {
 
 }

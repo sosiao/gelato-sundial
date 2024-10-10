@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
+package com.yizlan.gelato.sundial.complex;
 
 import java.io.Serializable;
 
 /**
- * Provides accessors for the creator ID and the updater ID time with the same type.
+ * Provides accessors for the creator ID and the updater ID with the same type.
  *
  * @param <T> the type of fields that contains the creator ID and the updater ID,
  *            should implement {@link Comparable} and {@link Serializable}

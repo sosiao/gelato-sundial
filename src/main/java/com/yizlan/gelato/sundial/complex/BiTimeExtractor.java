@@ -14,19 +14,24 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
+package com.yizlan.gelato.sundial.complex;
+
+import com.yizlan.gelato.sundial.field.CreateTimeAccessor;
+import com.yizlan.gelato.sundial.field.UpdateTimeAccessor;
 
 import java.io.Serializable;
 
 /**
- * Provides accessors for the creation time and update time with the same type.
+ * Provides accessors for the creation time and update time.
  *
- * @param <T> the type of fields that contains the creation time and update time,
- *            should implement {@link Comparable} and {@link Serializable}
+ * @param <T> the type of the creation time, should implement {@link Comparable} and {@link Serializable}
+ * @param <U> the type of the update time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @see BiTimeExtractor
+ * @see CreateTimeAccessor
+ * @see UpdateTimeAccessor
  * @since 1.1
  */
-public interface BinaryTimeExtractor<T extends Comparable<? super T> & Serializable> extends BiTimeExtractor<T, T> {
+public interface BiTimeExtractor<T extends Comparable<? super T> & Serializable,
+        U extends Comparable<? super U> & Serializable> extends CreateTimeAccessor<T>, UpdateTimeAccessor<U> {
 
 }

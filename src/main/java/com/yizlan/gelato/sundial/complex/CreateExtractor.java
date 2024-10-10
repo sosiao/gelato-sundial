@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
+package com.yizlan.gelato.sundial.complex;
 
 import com.yizlan.gelato.sundial.field.CreateIdAccessor;
 import com.yizlan.gelato.sundial.field.CreateTimeAccessor;
