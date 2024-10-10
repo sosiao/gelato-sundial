@@ -16,7 +16,7 @@
 
 package com.yizlan.gelato.sundial.page;
 
-import com.yizlan.gelato.sundial.builder.Builder;
+import com.yizlan.gelato.sundial.gof.Builder;
 
 import java.io.Serializable;
 import java.util.List;
@@ -34,12 +34,12 @@ public class Pagination implements Serializable {
     /**
      * Page number
      */
-    private Integer pageIndex = 0;
+    private Integer pageIndex;
 
     /**
      * Page capacity
      */
-    private Integer pageSize = 10;
+    private Integer pageSize;
 
     /**
      * Sort fields
