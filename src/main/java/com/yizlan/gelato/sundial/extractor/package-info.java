@@ -17,6 +17,10 @@
 
 /**
  * This package contains the interfaces for extracting getter/setter from pojo.
+ * <p>
+ * Note: Since version {@code 1.3.0}, this package{{@code com.yizlan.gelato.sundial.extractor}}
+ * <p>
+ * will be moved to {@code com.yizlan.gelato.sundial.complex}.
  *
  * @author Zen Gershon
  * @since 1.1

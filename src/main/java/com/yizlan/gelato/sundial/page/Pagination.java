@@ -34,12 +34,12 @@ public class Pagination implements Serializable {
     /**
      * Page number
      */
-    private Integer pageIndex = 0;
+    private Integer pageIndex;
 
     /**
      * Page capacity
      */
-    private Integer pageSize = 10;
+    private Integer pageSize;
 
     /**
      * Sort fields
