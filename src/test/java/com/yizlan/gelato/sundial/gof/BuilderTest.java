@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.builder;
+package com.yizlan.gelato.sundial.gof;
 
 import org.junit.jupiter.api.Test;
 

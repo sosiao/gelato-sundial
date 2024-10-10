@@ -14,29 +14,11 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.builder;
-
-import java.io.Serializable;
 
 /**
- * Builder pattern.
- * <p>
- * Used to construct objects of type T.
- * <p>
- * Note: In the version {@code 1.2.0}, this class will be moved to
- * the <code>com.yizlan.gelato.sundial.gof</code> package.
+ * This package contains methods for implementing various design patterns.
  *
- * @param <T> The type of object the builder will construct.
  * @author Zen Gershon
  * @since 1.0
  */
-public interface Builder<T> extends Serializable {
-
-    /**
-     * build <code>T</code>
-     *
-     * @return T The constructed object
-     */
-    T build();
-
-}
+package com.yizlan.gelato.sundial.gof;

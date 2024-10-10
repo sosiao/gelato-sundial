@@ -16,7 +16,7 @@
 
 package com.yizlan.gelato.sundial.page;
 
-import com.yizlan.gelato.sundial.builder.Builder;
+import com.yizlan.gelato.sundial.gof.Builder;
 
 import java.io.Serializable;
 
