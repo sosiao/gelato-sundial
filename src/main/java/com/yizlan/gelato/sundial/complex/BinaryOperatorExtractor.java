@@ -14,24 +14,19 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
-
-import com.yizlan.gelato.sundial.field.CreateIdAccessor;
-import com.yizlan.gelato.sundial.field.UpdateIdAccessor;
+package com.yizlan.gelato.sundial.complex;
 
 import java.io.Serializable;
 
 /**
- * Provides accessors for the creator ID and the updater ID.
+ * Provides accessors for the creator ID and the updater ID with the same type.
  *
- * @param <T> the type of the creator ID, should implement {@link Comparable} and {@link Serializable}
- * @param <U> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
+ * @param <T> the type of fields that contains the creator ID and the updater ID,
+ *            should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @see CreateIdAccessor
- * @see UpdateIdAccessor
+ * @see BiOperatorExtractor
  * @since 1.1
  */
-public interface BiOperatorExtractor<T extends Comparable<T> & Serializable,
-        U extends Comparable<U> & Serializable> extends CreateIdAccessor<T>, UpdateIdAccessor<U> {
+public interface BinaryOperatorExtractor<T extends Comparable<T> & Serializable> extends BiOperatorExtractor<T, T> {
 
 }

@@ -14,24 +14,30 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
+package com.yizlan.gelato.sundial.filling;
 
-import com.yizlan.gelato.sundial.field.UpdateIdAccessor;
-import com.yizlan.gelato.sundial.field.UpdateTimeAccessor;
+import com.yizlan.gelato.sundial.complex.BiTimeExtractor;
 
 import java.io.Serializable;
 
 /**
- * Provides accessors for the updater ID and update time.
+ * Fill fields of the target object.
  *
- * @param <T> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
+ * @param <T> the type of the creation time, should implement {@link Comparable} and {@link Serializable}
  * @param <U> the type of the update time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @see UpdateIdAccessor
- * @see UpdateTimeAccessor
- * @since 1.1
+ * @since 1.3.0
  */
-public interface UpdateExtractor<T extends Comparable<T> & Serializable,
-        U extends Comparable<? super U> & Serializable> extends UpdateIdAccessor<T>, UpdateTimeAccessor<U> {
+public interface BiTimeFiller<T extends Comparable<? super T> & Serializable,
+        U extends Comparable<? super U> & Serializable> {
+
+    /**
+     * Populates the creation time and the update time
+     *
+     * @param target the target object to be populated
+     * @param <R>    the type of the target object, should extends {@link BiTimeExtractor}
+     * @return the target object
+     */
+    <R extends BiTimeExtractor<T, U>> R popTime(R target);
 
 }
