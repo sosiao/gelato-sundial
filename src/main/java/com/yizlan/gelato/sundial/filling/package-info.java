@@ -14,19 +14,13 @@
  * limitations under the License.
  */
 
-package com.yizlan.gelato.sundial.extractor;
-
-import java.io.Serializable;
 
 /**
- * Provides accessors for the creator ID and the updater ID time with the same type.
+ * This package contains interfaces related to the fillings.
+ * <p>
+ * It provides functionalities for filling fields of the target object.
  *
- * @param <T> the type of fields that contains the creator ID and the updater ID,
- *            should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @see BiOperatorExtractor
- * @since 1.1
+ * @since 1.3.0
  */
-public interface BinaryOperatorExtractor<T extends Comparable<T> & Serializable> extends BiOperatorExtractor<T, T> {
-
-}
+package com.yizlan.gelato.sundial.filling;
