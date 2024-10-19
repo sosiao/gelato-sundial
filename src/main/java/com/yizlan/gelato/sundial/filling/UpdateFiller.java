@@ -26,7 +26,7 @@ import java.io.Serializable;
  * @param <T> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
  * @param <U> the type of the update time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.3.0
  */
 public interface UpdateFiller<T extends Comparable<T> & Serializable, U extends Comparable<? super U> & Serializable> {
 
@@ -37,6 +37,6 @@ public interface UpdateFiller<T extends Comparable<T> & Serializable, U extends 
      * @param <R>    the type of the target object, should extends {@link UpdateExtractor}
      * @return the target object
      */
-    <R extends UpdateExtractor<T, U>> R populate(R target);
+    <R extends UpdateExtractor<T, U>> R popUpdate(R target);
 
 }

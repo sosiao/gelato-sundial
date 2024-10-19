@@ -16,8 +16,6 @@
 
 package com.yizlan.gelato.sundial.filling;
 
-import com.yizlan.gelato.sundial.complex.BinaryOperatorExtractor;
-
 import java.io.Serializable;
 
 /**
@@ -26,17 +24,9 @@ import java.io.Serializable;
  * @param <T> the type of fields that contains the creator ID and the updater ID with the same type,
  *            should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @since 1.0
+ * @see BiOperatorFiller
+ * @since 1.3.0
  */
-public interface BinaryOperatorFiller<T extends Comparable<T> & Serializable> {
-
-    /**
-     * Populates the creator ID and the updater ID with the same type
-     *
-     * @param target the target object to be populated
-     * @param <R>    the type of the target object, should extends {@link BinaryOperatorExtractor}
-     * @return the target object
-     */
-    <R extends BinaryOperatorExtractor<T>> R populate(R target);
+public interface BinaryOperatorFiller<T extends Comparable<T> & Serializable> extends BiOperatorFiller<T, T> {
 
 }

@@ -14,22 +14,13 @@
  * limitations under the License.
  */
 
+
+/**
+ * This package contains interfaces related to the fillings.
+ * <p>
+ * It provides functionalities for filling fields of the target object.
+ *
+ * @author Zen Gershon
+ * @since 1.3.0
+ */
 package com.yizlan.gelato.sundial.filling;
-
-import org.junit.jupiter.api.Test;
-
-public class PopulatorTest {
-
-    @Test
-    public void test() {
-        Teacher teacher = new Teacher();
-        teacher.setId("1");
-        teacher.setName("2");
-
-        DataFiller dataFiller = new DataFiller();
-        Teacher update = dataFiller.popUpdate(teacher);
-        System.out.println(update);
-        Teacher basic = dataFiller.popBasic(teacher);
-        System.out.println(basic);
-    }
-}

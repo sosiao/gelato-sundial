@@ -26,7 +26,7 @@ import java.io.Serializable;
  * @param <T> the type of the creation time, should implement {@link Comparable} and {@link Serializable}
  * @param <U> the type of the update time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.3.0
  */
 public interface BiTimeFiller<T extends Comparable<? super T> & Serializable,
         U extends Comparable<? super U> & Serializable> {
@@ -38,6 +38,6 @@ public interface BiTimeFiller<T extends Comparable<? super T> & Serializable,
      * @param <R>    the type of the target object, should extends {@link BiTimeExtractor}
      * @return the target object
      */
-    <R extends BiTimeExtractor<T, U>> R populate(R target);
+    <R extends BiTimeExtractor<T, U>> R popTime(R target);
 
 }

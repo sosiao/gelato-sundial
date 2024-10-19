@@ -16,8 +16,6 @@
 
 package com.yizlan.gelato.sundial.filling;
 
-import com.yizlan.gelato.sundial.complex.BinaryTimeExtractor;
-
 import java.io.Serializable;
 
 /**
@@ -26,17 +24,9 @@ import java.io.Serializable;
  * @param <T> the type of fields that contains the creation time and the update time with the same type,
  *            should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @since 1.0
+ * @see BiTimeFiller
+ * @since 1.3.0
  */
-public interface BinaryTimeFiller<T extends Comparable<? super T> & Serializable> {
-
-    /**
-     * Populates the creation time and the update time with the same type
-     *
-     * @param target the target object to be populated
-     * @param <R>    the type of the target object, should extends {@link BinaryTimeExtractor}
-     * @return the target object
-     */
-    <R extends BinaryTimeExtractor<T>> R populate(R target);
+public interface BinaryTimeFiller<T extends Comparable<? super T> & Serializable> extends BiTimeFiller<T, T> {
 
 }

@@ -26,7 +26,7 @@ import java.io.Serializable;
  * @param <T> the type of the creator ID, should implement {@link Comparable} and {@link Serializable}
  * @param <U> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.3.0
  */
 public interface BiOperatorFiller<T extends Comparable<T> & Serializable, U extends Comparable<U> & Serializable> {
 
@@ -37,6 +37,6 @@ public interface BiOperatorFiller<T extends Comparable<T> & Serializable, U exte
      * @param <R>    the type of the target object, should extends {@link BiOperatorExtractor}
      * @return the target object
      */
-    <R extends BiOperatorExtractor<T, U>> R populate(R target);
+    <R extends BiOperatorExtractor<T, U>> R popOperator(R target);
 
 }

@@ -16,7 +16,8 @@
 
 package com.yizlan.gelato.sundial.filling;
 
-import com.yizlan.gelato.sundial.complex.BiBaseExtractor;
+import com.yizlan.gelato.sundial.complex.BinaryBaseExtractor;
+import com.yizlan.gelato.sundial.complex.UpdateExtractor;
 
 import java.util.Date;
 
@@ -24,9 +25,9 @@ import java.util.Date;
  * demo teacher
  *
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.3.0
  */
-public class Teacher implements BiBaseExtractor<String, Date, String, Date> {
+public class Teacher implements BinaryBaseExtractor<String, Date>,UpdateExtractor<String, Date> {
 
     private String id;
 

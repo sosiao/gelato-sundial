@@ -28,7 +28,7 @@ import java.io.Serializable;
  * @param <S> the type of the updater ID, should implement {@link Comparable} and {@link Serializable}
  * @param <Q> the type of the update time, should implement {@link Comparable} and {@link Serializable}
  * @author Zen Gershon
- * @since 1.0
+ * @since 1.3.0
  */
 public interface BiBaseFiller<T extends Comparable<T> & Serializable,
         U extends Comparable<? super U> & Serializable, S extends Comparable<S> & Serializable,
@@ -41,6 +41,6 @@ public interface BiBaseFiller<T extends Comparable<T> & Serializable,
      * @param <R>    the type of the target object, should extends {@link BiBaseExtractor}
      * @return the target object
      */
-    <R extends BiBaseExtractor<T, U, S, Q>> R populate(R target);
+    <R extends BiBaseExtractor<T, U, S, Q>> R popBasic(R target);
 
 }

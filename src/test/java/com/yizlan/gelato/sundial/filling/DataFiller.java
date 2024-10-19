@@ -17,14 +17,14 @@
 package com.yizlan.gelato.sundial.filling;
 
 import com.yizlan.gelato.sundial.complex.BiBaseExtractor;
-import com.yizlan.gelato.sundial.complex.BinaryBaseExtractor;
+import com.yizlan.gelato.sundial.complex.UpdateExtractor;
 
 import java.util.Date;
 
-public class DataFiller implements BiBaseFiller<String, Date,String, Date>, BinaryBaseFiller<String, Date> {
+public class DataFiller implements BinaryBaseFiller<String, Date>, UpdateFiller<String, Date> {
 
     @Override
-    public <R extends BiBaseExtractor<String, Date, String, Date>> R populate(R target) {
+    public <R extends BiBaseExtractor<String, Date, String, Date>> R popBasic(R target) {
         target.setCreateBy("createBy1");
         target.setUpdateBy("updateBy1");
         target.setCreateTime(new Date());
@@ -33,10 +33,8 @@ public class DataFiller implements BiBaseFiller<String, Date,String, Date>, Bina
     }
 
     @Override
-    public <R extends BinaryBaseExtractor<String, Date>> R populate(R target) {
-        target.setCreateBy("createBy2");
+    public <R extends UpdateExtractor<String, Date>> R popUpdate(R target) {
         target.setUpdateBy("updateBy2");
-        target.setCreateTime(new Date());
         target.setUpdateTime(new Date());
         return target;
     }
