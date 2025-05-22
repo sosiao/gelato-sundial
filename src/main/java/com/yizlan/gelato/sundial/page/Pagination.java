@@ -84,6 +84,15 @@ public class Pagination implements Serializable {
         this.sortFields = sortFields;
     }
 
+    @Override
+    public String toString() {
+        return "Pagination{" +
+                "pageIndex=" + pageIndex +
+                ", pageSize=" + pageSize +
+                ", sortFields=" + sortFields +
+                '}';
+    }
+
     private static final class PaginationBuilderImpl extends PaginationBuilder<Pagination, PaginationBuilderImpl> {
 
         private PaginationBuilderImpl() {
@@ -109,6 +118,15 @@ public class Pagination implements Serializable {
         private Integer pageSize;
 
         private List<SortField> sortFields;
+
+        @Override
+        public String toString() {
+            return "PaginationBuilder{" +
+                    "pageIndex=" + pageIndex +
+                    ", pageSize=" + pageSize +
+                    ", sortFields=" + sortFields +
+                    '}';
+        }
 
         public R pageIndex(final Integer pageIndex) {
             this.pageIndex = pageIndex;
