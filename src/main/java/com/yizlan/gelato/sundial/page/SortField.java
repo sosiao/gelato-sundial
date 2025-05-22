@@ -72,6 +72,14 @@ public class SortField implements Serializable {
         this.asc = asc;
     }
 
+    @Override
+    public String toString() {
+        return "SortField{" +
+                "column='" + column + '\'' +
+                ", asc=" + asc +
+                '}';
+    }
+
     private static final class SortFieldBuilderImpl extends SortFieldBuilder<SortField, SortFieldBuilderImpl> {
 
         private SortFieldBuilderImpl() {
@@ -95,6 +103,14 @@ public class SortField implements Serializable {
         private String column;
 
         private boolean asc;
+
+        @Override
+        public String toString() {
+            return "SortFieldBuilder{" +
+                    "column='" + column + '\'' +
+                    ", asc=" + asc +
+                    '}';
+        }
 
         public R column(final String column) {
             this.column = column;

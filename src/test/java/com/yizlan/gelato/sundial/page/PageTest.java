@@ -47,6 +47,7 @@ public class PageTest {
                                 .build())
                 )
                 .build();
+        System.out.println(userSearch.toString());
 
         assert userSearch.getEmail().equals("aiilary@163.com");
         assert userSearch.getName().contains("Gershon");
