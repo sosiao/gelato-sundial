@@ -6,7 +6,7 @@
 
     <groupId>com.yizlan</groupId>
     <artifactId>gelato-sundial</artifactId>
-    <version>1.3.2</version>
+    <version>1.4.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>${project.artifactId}</name>
