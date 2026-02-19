@@ -25,9 +25,24 @@ package com.yizlan.gelato.sundial.constants;
 public interface DateTimePattern {
 
     /**
+     * ISO date format: 2026
+     */
+    String ISO_YEAR = "yyyy";
+
+    /**
+     * ISO date format: 202601
+     */
+    String ISO_YEAR_MONTH_BASIC = "yyyyMM";
+
+    /**
      * ISO date format: 20260119
      */
     String ISO_DATE_BASIC = "yyyyMMdd";
+
+    /**
+     * ISO date format: 2026-01-19
+     */
+    String ISO_YEAR_MONTH_LOCAL = "yyyy-MM";
 
     /**
      * ISO date format: 2026-01-19
@@ -37,62 +52,92 @@ public interface DateTimePattern {
     /**
      * ISO date format: 2026-01-19+08:00
      */
-    String ISO_DATE_OFFSET = "yyyy-MM-ddXXX";
+    String ISO_DATE_LOCAL_OFFSET = "yyyy-MM-ddXXX";
+
+    /**
+     * ISO date format: 213000
+     */
+    String ISO_TIME_BASIC = "HHmmss";
 
     /**
      * ISO date format: 21:30:00
      */
-    String ISO_TIME_BASIC = "HH:mm:ss";
+    String ISO_TIME_LOCAL = "HH:mm:ss";
 
     /**
      * ISO date format: 21:30:00+08:00
      */
-    String ISO_TIME_OFFSET = "HH:mm:ssXXX";
+    String ISO_TIME_LOCAL_OFFSET = "HH:mm:ssXXX";
+
+    /**
+     * ISO date format: 213000123
+     */
+    String ISO_TIME_MILLIS_BASIC = "HHmmssSSS";
 
     /**
      * ISO date format: 21:30:00.123
      */
-    String ISO_TIME_MILLIS = "HH:mm:ss.SSS";
+    String ISO_TIME_MILLIS_LOCAL = "HH:mm:ss.SSS";
 
     /**
      * ISO date format: 21:30:00.123+08:00
      */
-    String ISO_TIME_MILLIS_OFFSET = "HH:mm:ss.SSSXXX";
+    String ISO_TIME_MILLIS_LOCAL_OFFSET = "HH:mm:ss.SSSXXX";
+
+    /**
+     * ISO date format: 20260119T213000
+     */
+    String ISO_DATE_TIME_BASIC = "yyyyMMdd'T'HHmmss";
 
     /**
      * ISO date format: 2026-01-19T21:30:00
      */
-    String ISO_DATE_TIME_BASIC = "yyyy-MM-dd'T'HH:mm:ss";
+    String ISO_DATE_TIME_LOCAL = "yyyy-MM-dd'T'HH:mm:ss";
 
     /**
-     * ISO date format: 2026-01-19T21:30:00
+     * ISO date format: 2026-01-19T21:30:00 Asia/Shanghai
      */
-    String ISO_DATE_TIME_ZONED = "yyyy-MM-dd'T'HH:mm:ss VV";
+    String ISO_DATE_TIME_LOCAL_ZONED = "yyyy-MM-dd'T'HH:mm:ss VV";
 
     /**
      * ISO date format: 2026-01-19T21:30:00+08:00
      */
-    String ISO_DATE_TIME_OFFSET = "yyyy-MM-dd'T'HH:mm:ssXXX";
+    String ISO_DATE_TIME_LOCAL_OFFSET = "yyyy-MM-dd'T'HH:mm:ssXXX";
+
+    /**
+     * ISO date format: 20260119T213000123
+     */
+    String ISO_DATE_TIME_MILLIS_BASIC = "yyyyMMdd'T'HHmmssSSS";
 
     /**
      * ISO date format: 2026-01-19T21:30:00.123
      */
-    String ISO_DATE_TIME_MILLIS = "yyyy-MM-dd'T'HH:mm:ss.SSS";
+    String ISO_DATE_TIME_MILLIS_LOCAL = "yyyy-MM-dd'T'HH:mm:ss.SSS";
 
     /**
      * ISO date format: 2026-01-19T21:30:00.123+08:00
      */
-    String ISO_DATE_TIME_MILLIS_OFFSET = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
+    String ISO_DATE_TIME_MILLIS_LOCAL_OFFSET = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
+
+    /**
+     * ISO date format: 20260119T213000Z
+     */
+    String ISO_DATE_TIME_UTC_BASIC = "yyyyMMdd'T'HHmmss'Z'";
 
     /**
      * ISO date format: 2026-01-19T21:30:00Z
      */
-    String ISO_DATE_TIME_UTC = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+    String ISO_DATE_TIME_UTC_LOCAL = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+
+    /**
+     * ISO date format: 20260119T213000123Z
+     */
+    String ISO_DATE_TIME_MILLIS_UTC_BASIC = "yyyyMMdd'T'HHmmssSSS'Z'";
 
     /**
      * ISO date format: 2026-01-19T21:30:00.123Z
      */
-    String ISO_DATE_TIME_MILLIS_UTC = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+    String ISO_DATE_TIME_MILLIS_UTC_LOCAL = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
 
     /**
      * ISO date format: 2026-19
@@ -100,9 +145,14 @@ public interface DateTimePattern {
     String ISO_ORDINAL_DATE = "yyyy-D";
 
     /**
-     * ISO date format: 2026-W03-1
+     * ISO date format: 2026-W03
      */
-    String ISO_WEEK_DATE = "yyyy-'W'ww-e";
+    String ISO_YEAR_WEEK = "yyyy-'W'ww";
+
+    /**
+     * ISO date format: 2026-W03-2
+     */
+    String ISO_YEAR_WEEK_DAY = "yyyy-'W'ww-e";
 
     /**
      * RFC date format: Mon, 19 Jan 2026 21:30:00 GMT
