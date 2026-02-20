@@ -17,7 +17,7 @@
 package com.yizlan.gelato.sundial.constants;
 
 /**
- * 时间格式
+ * date time pattern
  *
  * @author Hoipang
  * @since 1.4.0
@@ -40,7 +40,7 @@ public interface DateTimePattern {
     String ISO_DATE_BASIC = "yyyyMMdd";
 
     /**
-     * ISO date format: 2026-01-19
+     * ISO date format: 2026-01
      */
     String ISO_YEAR_MONTH_LOCAL = "yyyy-MM";
 
@@ -140,22 +140,22 @@ public interface DateTimePattern {
     String ISO_DATE_TIME_MILLIS_UTC_LOCAL = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
 
     /**
-     * ISO date format: 2026-19
+     * ISO date format: 2026-019
      */
-    String ISO_ORDINAL_DATE = "yyyy-D";
+    String ISO_ORDINAL_DAY = "yyyy-DDD";
 
     /**
-     * ISO date format: 2026-W03
+     * ISO date format: 2026-W04
      */
     String ISO_YEAR_WEEK = "yyyy-'W'ww";
 
     /**
-     * ISO date format: 2026-W03-2
+     * ISO date format: 2026-W04-2
      */
-    String ISO_YEAR_WEEK_DAY = "yyyy-'W'ww-e";
+    String ISO_YEAR_WEEK_ORDINAL_DAY = "yyyy-'W'ww-e";
 
     /**
-     * RFC date format: Mon, 19 Jan 2026 21:30:00 GMT
+     * RFC date format: 星期一, 19 一月 2026 21:30:00 CST
      */
-    String RFC_1123_DATE_TIME = "EEE, dd MMM yyyy HH:mm:ss z";
+    String RFC_1123_DATE_TIME = "eee, dd MMM yyyy HH:mm:ss z";
 }
