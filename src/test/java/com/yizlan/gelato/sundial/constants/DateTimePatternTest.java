@@ -45,23 +45,25 @@ public class DateTimePatternTest {
         assert "213000".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_BASIC)));
         assert "21:30:00".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_LOCAL)));
         assert "21:30:00+08:00".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_LOCAL_OFFSET)));
-        assert "213000123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_MILLIS_BASIC)));
-        assert "21:30:00.123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_MILLIS_LOCAL)));
-        assert "21:30:00.123+08:00".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_MILLIS_LOCAL_OFFSET)));
+        assert "213000123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_MS_BASIC)));
+        assert "21:30:00.123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_MS_LOCAL)));
+        assert "21:30:00.123+08:00".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_TIME_MS_LOCAL_OFFSET)));
         assert "20260119T213000".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_BASIC)));
         assert "2026-01-19T21:30:00".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_LOCAL)));
         assert "2026-01-19T21:30:00 Asia/Shanghai".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_LOCAL_ZONED)));
         assert "2026-01-19T21:30:00+08:00".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_LOCAL_OFFSET)));
-        assert "20260119T213000123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MILLIS_BASIC)));
-        assert "2026-01-19T21:30:00.123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MILLIS_LOCAL)));
-        assert "2026-01-19T21:30:00.123+08:00".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MILLIS_LOCAL_OFFSET)));
+        assert "20260119T213000123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MS_BASIC)));
+        assert "2026-01-19T21:30:00.123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MS_LOCAL)));
+        assert "2026-01-19T21:30:00.123+08:00".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MS_LOCAL_OFFSET)));
         assert "20260119T213000Z".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_UTC_BASIC)));
         assert "2026-01-19T21:30:00Z".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_UTC_LOCAL)));
-        assert "20260119T213000123Z".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MILLIS_UTC_BASIC)));
-        assert "2026-01-19T21:30:00.123Z".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MILLIS_UTC_LOCAL)));
+        assert "20260119T213000123Z".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MS_UTC_BASIC)));
+        assert "2026-01-19T21:30:00.123Z".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_DATE_TIME_MS_UTC_LOCAL)));
         assert "2026-019".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_ORDINAL_DAY)));
         assert "2026-W04".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_YEAR_WEEK)));
         assert "2026-W04-2".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.ISO_YEAR_WEEK_ORDINAL_DAY)));
         assert "星期一, 19 一月 2026 21:30:00 CST".equals(zonedDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.RFC_1123_DATE_TIME)));
+        assert "2026-01-19 21:30:00".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.LIVING_DATE_TIME)));
+        assert "2026-01-19 21:30:00.123".equals(localDateTime.format(DateTimeFormatter.ofPattern(DateTimePattern.LIVING_DATE_TIME_MS)));
     }
 }

@@ -72,17 +72,17 @@ public interface DateTimePattern {
     /**
      * ISO date format: 213000123
      */
-    String ISO_TIME_MILLIS_BASIC = "HHmmssSSS";
+    String ISO_TIME_MS_BASIC = "HHmmssSSS";
 
     /**
      * ISO date format: 21:30:00.123
      */
-    String ISO_TIME_MILLIS_LOCAL = "HH:mm:ss.SSS";
+    String ISO_TIME_MS_LOCAL = "HH:mm:ss.SSS";
 
     /**
      * ISO date format: 21:30:00.123+08:00
      */
-    String ISO_TIME_MILLIS_LOCAL_OFFSET = "HH:mm:ss.SSSXXX";
+    String ISO_TIME_MS_LOCAL_OFFSET = "HH:mm:ss.SSSXXX";
 
     /**
      * ISO date format: 20260119T213000
@@ -107,17 +107,17 @@ public interface DateTimePattern {
     /**
      * ISO date format: 20260119T213000123
      */
-    String ISO_DATE_TIME_MILLIS_BASIC = "yyyyMMdd'T'HHmmssSSS";
+    String ISO_DATE_TIME_MS_BASIC = "yyyyMMdd'T'HHmmssSSS";
 
     /**
      * ISO date format: 2026-01-19T21:30:00.123
      */
-    String ISO_DATE_TIME_MILLIS_LOCAL = "yyyy-MM-dd'T'HH:mm:ss.SSS";
+    String ISO_DATE_TIME_MS_LOCAL = "yyyy-MM-dd'T'HH:mm:ss.SSS";
 
     /**
      * ISO date format: 2026-01-19T21:30:00.123+08:00
      */
-    String ISO_DATE_TIME_MILLIS_LOCAL_OFFSET = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
+    String ISO_DATE_TIME_MS_LOCAL_OFFSET = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
 
     /**
      * ISO date format: 20260119T213000Z
@@ -132,12 +132,12 @@ public interface DateTimePattern {
     /**
      * ISO date format: 20260119T213000123Z
      */
-    String ISO_DATE_TIME_MILLIS_UTC_BASIC = "yyyyMMdd'T'HHmmssSSS'Z'";
+    String ISO_DATE_TIME_MS_UTC_BASIC = "yyyyMMdd'T'HHmmssSSS'Z'";
 
     /**
      * ISO date format: 2026-01-19T21:30:00.123Z
      */
-    String ISO_DATE_TIME_MILLIS_UTC_LOCAL = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+    String ISO_DATE_TIME_MS_UTC_LOCAL = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
 
     /**
      * ISO date format: 2026-019
@@ -158,4 +158,14 @@ public interface DateTimePattern {
      * RFC date format: 星期一, 19 一月 2026 21:30:00 CST
      */
     String RFC_1123_DATE_TIME = "eee, dd MMM yyyy HH:mm:ss z";
+
+    /**
+     * Living date format: 2026-01-19 21:30:00
+     */
+    String LIVING_DATE_TIME = "yyyy-MM-dd HH:mm:ss";
+
+    /**
+     * Living date format: 2026-01-19 21:30:00.123
+     */
+    String LIVING_DATE_TIME_MS = "yyyy-MM-dd HH:mm:ss.SSS";
 }
